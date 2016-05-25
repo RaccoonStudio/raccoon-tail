@@ -4,7 +4,21 @@
  * @author Damien Senger <damien@raccoon.studio>
  */
 
-/**
- * Normalize.css import as a browser CSS reset
- */
+
+/** Normalize.css import as a browser CSS reset **/
 @import "../node_modules/normalize.css/normalize";
+
+
+/** Default Raccoon's tail kickstarter variables **/
+@import "__variables";
+
+
+/** Raccoon's tail kickstarter mixins loading **/
+@import "mixins/mixins";
+
+
+/** Raccoon's tail kickstarter components **/
+@import "helpers";
+@import "code";
+@import "a11y";
+@import "print";

@@ -1,0 +1,79 @@
+/**
+ * Raccoon's tail kickstarter CSS code classes file
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+
+
+/********************************
+ * Inline and block code styles *
+ ********************************/
+
+code,
+kbd,
+pre,
+samp {
+  font-family: $font-code;
+}
+
+
+/**********************
+ * Inline code styles *
+ **********************/
+
+code {
+  padding: $double-value #{$double-value * 2};
+  background: $code-background;
+  border-radius: $radius-base;
+  color: $code-color;
+  font-size: 90%;
+}
+
+kbd {
+  padding: $double-value #{$double-value * 2};
+  background: $code-background;
+  border-radius: $radius-base;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .25);
+  color: $code-color;
+  font-size: 90%;
+
+  & kbd {
+    padding: 0;
+    box-shadow: none;
+    font-size: 100%;
+    font-weight: bold;
+  }
+}
+
+
+/*********************
+ * Block code styles *
+ *********************/
+
+pre {
+  display: block;
+  margin: 0 0 #{$line-height-body / 2};
+  padding: #{$line-height-body -1 } / 2;
+  background: $code-background;
+  border: 1px solid $code-background;
+  border-radius: $radius-base;
+  color: $code-color;
+  font-size: $font-size - 1;
+  line-height: $line-height-body;
+  word-break: break-all;
+  word-wrap: break-word;
+
+  &-scrollable {
+    max-height: $codeblock-maxheight;
+    overflow-y: scroll;
+  }
+
+  code {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+    white-space: pre-wrap;
+  }
+}

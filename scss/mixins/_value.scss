@@ -1,0 +1,32 @@
+/**
+ * Raccoon's tail kickstarter Sass values mixins
+ * (rework from zurb foundation framework)
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+
+/**
+ * Determine if a value is not falsey, in CSS terms
+ */
+@function has-value($val) {
+  @if $val == null of $val == none {
+    @return false;
+  }
+  @if type-of($val) == 'number' and strip-unit($val) == 0 {
+    @return false;
+  }
+  @if type-of($val) == 'list' and length($val) == 0 {
+    @return false;
+  }
+  @return true;
+}
+
+/**
+ * Finds a value in a nested map
+ */
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}

@@ -18,13 +18,14 @@ $font-code:                 Courier, monospace !default;
 $font-size:                 1.6rem !default;
 $line-height-body:          1.5 !default;
 $line-height-headings:      1.25 !default;
-$h1-size:                   3.16em !default;
-$h2-size:                   2.38em !default;
-$h3-size:                   1.77em !default;
-$h4-size:                   1.33em !default;
-$h5-size:                   1.15em !default;
-$h6-size:                   1em !default;
+$headings-size: (           "h1": 3.16em,
+                            "h2": 2.38em,
+                            "h3": 1.77em,
+                            "h4": 1.33em,
+                            "h5": 1.15em,
+                            "h6": 1em) !default;
 $headings-ratio:            0 !default; // ratio override $h[1-4]-size if > 0
+$font-small-ratio:          .85 !default;
 
 
 /************************
@@ -34,8 +35,11 @@ $headings-ratio:            0 !default; // ratio override $h[1-4]-size if > 0
 /** Generic colors **/
 $base-color:                #000 !default;
 $base-color-invert:         #000 !default;
+
+/** Link colors **/
 $link-color:                #000 !default;
 $link-hover-color:          #000 !default;
+$link-visited-color:        #000 !default;
 
 /** Brand colors **/
 $primary-color:             #000 !default;
@@ -53,12 +57,14 @@ $base-background:           #fff !default;
 $primary-background:        #fff !default;
 $secondary-background:      #fff !default;
 $tertiary-background:       #fff !default;
+$code-background:           #000 !default;
 
 /** Misc colors **/
 $error-color:               #C00 !default;
 $warning-color:             #FC0 !default;
 $valid-color:               #0C0 !default;
 $info-color:                #00C !default;
+$code-color:                #fff !default;
 
 
 /**********************************************
@@ -85,22 +91,32 @@ $xxl-value:                 16rem !default;
 $xxl-plus-value:            18rem !default;
 $double-decimal-value:      20rem !default;
 
-/** Custom spacings **/
+/** Project custom spacings **/
 $border-size:               $small-plus-value !default;
+$radius-small:              $double-value !default;
+$radius-base:               $tiny-value !default;
+$radius-large:              $unit-value !default;
+$radius-circle:             50% !default;
 $container-padding:         $medium-plus-value !default;
+
+/** Misc spacings **/
+$codeblock-maxheight:       $double-decimal-value !default;
 
 
 /***************
  * Breakpoints *
  ***************/
 
-$tiny-screen:               320px;
-$tiny-plus-screen:          480px;
-$small-screen:              640px;
-$small-plus-screen:         768px;
-$med-screen:                960px;
-$med-plus-screen:           1024px;
-$large-screen:              1280px;
-$large-plus-screen:         1440px;
-$xl-screen:                 1600px;
-$xl-plus-screen:            1920px;
+$breakpoints: (
+  begin:        0,
+  tiny:         320px,
+  tiny-plus:    480px,
+  small:        640px,
+  small-plus:   768px,
+  med:          960px,
+  med-plus:     1024px,
+  large:        1280px,
+  large-plus:   1440px,
+  xl:           1600px,
+  xl-plus:      1920px,
+) !default;

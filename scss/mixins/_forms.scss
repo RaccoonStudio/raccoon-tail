@@ -1,0 +1,40 @@
+/**
+ * Raccoon's tail kickstarter Sass form mixins
+ * (rework from zurb foundation framework)
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+
+/**
+ * Generates a selector with every text input type.
+ * You can alse filter the list to only output a subset of those selectors.
+ */
+@function text-inputs($types: ()) {
+  $return: ();
+
+  $all-types:
+    text
+    password
+    date
+    datetime
+    datetime-local
+    month
+    week
+    email
+    number
+    search
+    tel
+    time
+    url
+    color;
+
+  @if not has-value($types) {
+    $types: $all-types;
+  }
+
+  @each $type in $types {
+    $return: append($return, unquote('[type=\'#{$type}\']'), comma);
+  }
+
+  @return $return;
+}

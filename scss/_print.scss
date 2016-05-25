@@ -1,0 +1,81 @@
+/**
+ * Raccoon's tail kickstarter CSS print classes file
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+
+
+/********************
+ * Quick pint reset *
+ ********************/
+
+@media print {
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    margin: auto;
+    width: auto;
+    font-family: sans-serif;
+    font-size: 12pt;
+  }
+
+  a {
+    color: #000;
+  }
+
+  .no-print {
+    display: none;
+  }
+
+  h1,
+  .h1-like,
+  h2,
+  .h2-like,
+  h3,
+  .h3-like,
+  caption {
+    page-break-after: avoid;
+  }
+
+  p,
+  .p-like,
+  h1,
+  .h1-like,
+  h2,
+  .h2-like,
+  h3,
+  .h3-like {
+    orphans: 3;
+    widows: 3;
+  }
+
+
+  /**
+   * display URL of a link after the text but don't display the URL for images
+   * or JavaScript and internal links
+   */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: ' (' attr(href) ')';
+  }
+
+  a[href^='javascript:']::after,
+  a[href^='#']::after {
+    content: '';
+  }
+
+  /**
+   * display what an abbreviation stands for after the text
+   */
+  abbr[title]::after {
+    content: ' (' attr(title) ')';
+  }
+}

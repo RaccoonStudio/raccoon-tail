@@ -1,0 +1,143 @@
+/**
+ * Raccoon's tail kickstarter CSS helpers file
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+
+
+/*********************************************************
+ * Border-box model and font-size reset for all elements *
+ *********************************************************/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-size: calc(1em * 0.625);
+}
+
+* {
+  box-sizing: inherit;
+}
+
+
+/***************************************
+ * HTML elements default state helpers *
+ ***************************************/
+
+a {
+  color: $link-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $link-hover-color;
+  }
+
+  &:visited {
+    color: $link-visited-color;
+  }
+}
+
+body {
+  background-color: $base-background;
+  color: $base-color;
+  font: $font-size #{"/"} $line-height-body $font-body;
+}
+
+em, i {
+  font-style: italic;
+}
+
+img:not([src$=".svg"]) {
+  height: auto;
+}
+
+small,
+.small {
+  font-size: #{$font-size * $font-small-ratio};
+}
+
+ul.is-unstyled,
+ul.unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+
+/*************************************
+ * HTML groups default state helpers *
+ *************************************/
+
+code,
+pre,
+samp,
+kbd {
+  font-family: $font-code;
+  line-height: normal;
+  white-space: pre-line; // IE fix
+  white-space: pre-wrap;
+}
+
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+video,
+svg {
+  max-width: 100%;
+}
+
+
+/************************
+ * Content font spacing *
+ ************************/
+
+p,
+.p-like,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+label,
+caption,
+details,
+figure {
+  margin-bottom: 0;
+  margin-top: $line-height-body;
+  line-height: $line-height-body;
+}
+
+
+/***************************
+ * Headings default styles *
+ ***************************/
+
+@each $title, $size in $headings-size {
+  #{$title},
+  .#{$title}-like {
+    margin-bottom: 0;
+    margin-top: $line-height-headings;
+    font: $size #{"/"} $line-height-headings $font-headings;
+
+    &.small {
+      font-size: #{$size * $font-small-ratio};
+    }
+  }
+}
+
+
+/*******************
+ * Generic helpers *
+ *******************/
+
+.clearfix::after {
+  display: table;
+  content: '';
+  border-collapse: collapse;
+  clear: both;
+}

@@ -1,0 +1,69 @@
+/**
+ * Raccoon's tail kickstarter CSS a11y classes file
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+
+
+/**************************
+ * Hidden content helpers *
+ **************************/
+
+.is-hidden,
+[hidden] {
+  display: none;
+}
+
+.visually-hidden {
+  @include element-invisible;
+}
+
+.is-disabled,
+[disabled] {
+  cursor: not-allowed;
+  filter: greyscale(1);
+  opacity: .5;
+  pointer-events: none;
+}
+
+
+/*********************
+ * Skip links helper *
+ *********************/
+
+.skip-links {
+  position: absolute;
+
+  & a {
+    position: absolute;
+    overflow: hidden;
+    padding: 0.5rem;
+    background: black;
+    clip: rect(1px, 1px, 1px, 1px);
+    color: white;
+    text-decoration: none;
+
+    &:focus {
+      position: static;
+      overflow: visible;
+      clip: auto;
+    }
+  }
+}
+
+
+/************************************
+ * Screen reader visibility classes *
+ ************************************/
+
+.show-for-sr,
+.show-on-focus {
+  @include element-invisible;
+}
+
+.show-on-focus {
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}

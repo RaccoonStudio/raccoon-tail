@@ -3,9 +3,7 @@
  *
  * @author Damien Senger <damien@raccoon.studio>
  */
-/**
- * Normalize.css import as a browser CSS reset
- */
+/** Normalize.css import as a browser CSS reset **/
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -371,3 +369,467 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */ }
+
+/** Default Raccoon's tail kickstarter variables **/
+/**
+ * Raccoon's tail kickstarter variables file
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+/******************************************
+ * Typeface and font sizes configurations *
+ ******************************************/
+/** Font stacks **/
+/** Font sizes **/
+/************************
+ * Colors configuration *
+ ************************/
+/** Generic colors **/
+/** Link colors **/
+/** Brand colors **/
+/** Backgrounds colors **/
+/** Misc colors **/
+/**********************************************
+ * Spacings (margins, paddings, borders, etc) *
+ **********************************************/
+/** Default spacings **/
+/** Project custom spacings **/
+/** Misc spacings **/
+/***************
+ * Breakpoints *
+ ***************/
+/** Raccoon's tail kickstarter mixins loading **/
+/**
+ * Raccoon's tail kickstarter Sass mixins calling file
+ * (rework from zurb foundation framework)
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+/**
+ * Raccoon's tail kickstarter Sass form mixins
+ * (rework from zurb foundation framework)
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+/**
+ * Generates a selector with every text input type.
+ * You can alse filter the list to only output a subset of those selectors.
+ */
+/**
+ * Raccoon's tail kickstarter Sass geometrical forms generation mixins
+ * (rework from zurb foundation framework)
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+/**
+ * Creates a CSS triangle, which can be used for dropdown arrows, dropdown pips and more.
+ * Use this mixin inside a `&::before` or `&::after` selector, to attach the triangle
+ * to an existing element.
+ */
+/**
+ * Adds a downward-facing triangle as a background image to an element.
+ * The image is formatted as an SVG, making it easy to change the color
+ * There's a black or white PNG fallback for Internet Explorer, depending on
+ * the lightness of the input color.
+ */
+/**
+ * Make an element visually hidden, but still accessible to keyboards and assistive devices
+ */
+/**
+ * Reverses the CSS output created by the `element-invisible()` mixin
+ */
+/**
+ * Vertically or horizontally centers the element inside of its first non-static parent
+ */
+/**
+ * Absolutely centers the element inside of its first non-static parent
+ */
+/**
+ * Raccoon's tail kickstarter Sass responsive mixins
+ * (rework from zurb foundation framework)
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+/************************
+ * Breakpoints function *
+ ************************/
+/**
+ * Generates a media query string matching the input value
+ */
+/**
+ * Wraps a media query around the content you put inside the mixin.
+ */
+/*********************
+ * Utility fonctions *
+ *********************/
+/**
+ * Convers the breakpoints map to a URL-encoded string
+ */
+/**
+ * Find the next key in a map
+ */
+/**
+ * Get a value for breakpoint from a responsive config map
+ */
+/**
+ * Removes the unit from a value
+ */
+/**
+ * Converts one or more pixel values into matching rem values
+ */
+/**
+ * Converts a unitless, pixel or rem value to em, for use in breakpoints.
+ */
+/**
+ * Concerts a pixel value to matching rem value.
+ */
+/**
+ * Raccoon's tail kickstarter Sass values mixins
+ * (rework from zurb foundation framework)
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+/**
+ * Determine if a value is not falsey, in CSS terms
+ */
+/**
+ * Finds a value in a nested map
+ */
+/** Raccoon's tail kickstarter components **/
+/**
+ * Raccoon's tail kickstarter CSS helpers file
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+/*********************************************************
+ * Border-box model and font-size reset for all elements *
+ *********************************************************/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-size: calc(1em * 0.625); }
+
+* {
+  box-sizing: inherit; }
+
+/***************************************
+ * HTML elements default state helpers *
+ ***************************************/
+a {
+  color: #000; }
+  a:hover, a:focus, a:active {
+    color: #000; }
+  a:visited {
+    color: #000; }
+
+body {
+  background-color: #fff;
+  color: #000;
+  font: 1.6rem / 1.5 Helvetica, sans-serif; }
+
+em, i {
+  font-style: italic; }
+
+img:not([src$=".svg"]) {
+  height: auto; }
+
+small,
+.small {
+  font-size: 1.36rem; }
+
+ul.is-unstyled,
+ul.unstyled {
+  padding-left: 0;
+  list-style: none; }
+
+/*************************************
+ * HTML groups default state helpers *
+ *************************************/
+code,
+pre,
+samp,
+kbd {
+  font-family: Courier, monospace;
+  line-height: normal;
+  white-space: pre-line;
+  white-space: pre-wrap; }
+
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+video,
+svg {
+  max-width: 100%; }
+
+/************************
+ * Content font spacing *
+ ************************/
+p,
+.p-like,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+label,
+caption,
+details,
+figure {
+  margin-bottom: 0;
+  margin-top: 1.5;
+  line-height: 1.5; }
+
+/***************************
+ * Headings default styles *
+ ***************************/
+h1,
+.h1-like {
+  margin-bottom: 0;
+  margin-top: 1.25;
+  font: 3.16em / 1.25 Georgia, serif; }
+  h1.small,
+  .h1-like.small {
+    font-size: 2.686em; }
+
+h2,
+.h2-like {
+  margin-bottom: 0;
+  margin-top: 1.25;
+  font: 2.38em / 1.25 Georgia, serif; }
+  h2.small,
+  .h2-like.small {
+    font-size: 2.023em; }
+
+h3,
+.h3-like {
+  margin-bottom: 0;
+  margin-top: 1.25;
+  font: 1.77em / 1.25 Georgia, serif; }
+  h3.small,
+  .h3-like.small {
+    font-size: 1.5045em; }
+
+h4,
+.h4-like {
+  margin-bottom: 0;
+  margin-top: 1.25;
+  font: 1.33em / 1.25 Georgia, serif; }
+  h4.small,
+  .h4-like.small {
+    font-size: 1.1305em; }
+
+h5,
+.h5-like {
+  margin-bottom: 0;
+  margin-top: 1.25;
+  font: 1.15em / 1.25 Georgia, serif; }
+  h5.small,
+  .h5-like.small {
+    font-size: 0.9775em; }
+
+h6,
+.h6-like {
+  margin-bottom: 0;
+  margin-top: 1.25;
+  font: 1em / 1.25 Georgia, serif; }
+  h6.small,
+  .h6-like.small {
+    font-size: 0.85em; }
+
+/*******************
+ * Generic helpers *
+ *******************/
+.clearfix::after {
+  display: table;
+  content: '';
+  border-collapse: collapse;
+  clear: both; }
+
+/**
+ * Raccoon's tail kickstarter CSS code classes file
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+/********************************
+ * Inline and block code styles *
+ ********************************/
+code,
+kbd,
+pre,
+samp {
+  font-family: Courier, monospace; }
+
+/**********************
+ * Inline code styles *
+ **********************/
+code {
+  padding: 0.2rem 0.4rem;
+  background: #000;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 90%; }
+
+kbd {
+  padding: 0.2rem 0.4rem;
+  background: #000;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-size: 90%; }
+  kbd kbd {
+    padding: 0;
+    box-shadow: none;
+    font-size: 100%;
+    font-weight: bold; }
+
+/*********************
+ * Block code styles *
+ *********************/
+pre {
+  display: block;
+  margin: 0 0 0.75;
+  padding: 1.5 -1 / 2;
+  background: #000;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 0.6rem;
+  line-height: 1.5;
+  word-break: break-all;
+  word-wrap: break-word; }
+  pre-scrollable {
+    max-height: 20rem;
+    overflow-y: scroll; }
+  pre code {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+    white-space: pre-wrap; }
+
+/**
+ * Raccoon's tail kickstarter CSS a11y classes file
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+/**************************
+ * Hidden content helpers *
+ **************************/
+.is-hidden,
+[hidden] {
+  display: none; }
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); }
+
+.is-disabled,
+[disabled] {
+  cursor: not-allowed;
+  -webkit-filter: greyscale(1);
+          filter: greyscale(1);
+  opacity: .5;
+  pointer-events: none; }
+
+/*********************
+ * Skip links helper *
+ *********************/
+.skip-links {
+  position: absolute; }
+  .skip-links a {
+    position: absolute;
+    overflow: hidden;
+    padding: 0.5rem;
+    background: black;
+    clip: rect(1px, 1px, 1px, 1px);
+    color: white;
+    text-decoration: none; }
+    .skip-links a:focus {
+      position: static;
+      overflow: visible;
+      clip: auto; }
+
+/************************************
+ * Screen reader visibility classes *
+ ************************************/
+.show-for-sr,
+.show-on-focus {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); }
+
+.show-on-focus:active, .show-on-focus:focus {
+  position: static !important;
+  height: auto;
+  width: auto;
+  overflow: visible;
+  clip: auto; }
+
+/**
+ * Raccoon's tail kickstarter CSS print classes file
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+/********************
+ * Quick pint reset *
+ ********************/
+@media print {
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  body {
+    margin: auto;
+    width: auto;
+    font-family: sans-serif;
+    font-size: 12pt; }
+  a {
+    color: #000; }
+  .no-print {
+    display: none; }
+  h1,
+  .h1-like,
+  h2,
+  .h2-like,
+  h3,
+  .h3-like,
+  caption {
+    page-break-after: avoid; }
+  p,
+  .p-like,
+  h1,
+  .h1-like,
+  h2,
+  .h2-like,
+  h3,
+  .h3-like {
+    orphans: 3;
+    widows: 3; }
+  /**
+   * display URL of a link after the text but don't display the URL for images
+   * or JavaScript and internal links
+   */
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]::after {
+    content: " (" attr(href) ")"; }
+  a[href^='javascript:']::after,
+  a[href^='#']::after {
+    content: ''; }
+  /**
+   * display what an abbreviation stands for after the text
+   */
+  abbr[title]::after {
+    content: " (" attr(title) ")"; } }
