@@ -1,0 +1,106 @@
+/**
+ * Raccoon's tail kickstarter variables file
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+
+
+/******************************************
+ * Typeface and font sizes configurations *
+ ******************************************/
+
+/** Font stacks **/
+$font-headings:             Georgia, serif !default;
+$font-body:                 Helvetica, sans-serif !default;
+$font-code:                 Courier, monospace !default;
+
+/** Font sizes **/
+$font-size:                 1.6rem !default;
+$line-height-body:          1.5 !default;
+$line-height-headings:      1.25 !default;
+$h1-size:                   3.16em !default;
+$h2-size:                   2.38em !default;
+$h3-size:                   1.77em !default;
+$h4-size:                   1.33em !default;
+$h5-size:                   1.15em !default;
+$h6-size:                   1em !default;
+$headings-ratio:            0 !default; // ratio override $h[1-4]-size if > 0
+
+
+/************************
+ * Colors configuration *
+ ************************/
+
+/** Generic colors **/
+$base-color:                #000 !default;
+$base-color-invert:         #000 !default;
+$link-color:                #000 !default;
+$link-hover-color:          #000 !default;
+
+/** Brand colors **/
+$primary-color:             #000 !default;
+$primary-color-dark:        #000 !default;
+$primary-color-light:       #000 !default;
+$secondary-color:           #000 !default;
+$secondary-color-dark:      #000 !default;
+$secondary-color-light:     #000 !default;
+$tertiary-color:            #000 !default;
+$tertiary-color-dark:       #000 !default;
+$tertiary-color-light:      #000 !default;
+
+/** Backgrounds colors **/
+$base-background:           #fff !default;
+$primary-background:        #fff !default;
+$secondary-background:      #fff !default;
+$tertiary-background:       #fff !default;
+
+/** Misc colors **/
+$error-color:               #C00 !default;
+$warning-color:             #FC0 !default;
+$valid-color:               #0C0 !default;
+$info-color:                #00C !default;
+
+
+/**********************************************
+ * Spacings (margins, paddings, borders, etc) *
+ **********************************************/
+
+/** Default spacings **/
+$pixel-value:               .1rem !default;
+$double-value:              .2rem !default;
+$tiny-value:                .5rem !default;
+$tiny-plus-value:           .7rem !default;
+$unit-value:                1rem !default;
+$small-value:               1.5rem !default;
+$small-plus-value:          2rem !default;
+$medium-value:              3rem !default;
+$medium-plus-value:         4rem !default;
+$demi-decimal-value:        5rem !default;
+$large-value:               6rem !default;
+$large-plus-value:          8rem !default;
+$decimal-value:             10rem !default;
+$xl-value:                  12rem !default;
+$xl-plus-value:             14rem !default;
+$xxl-value:                 16rem !default;
+$xxl-plus-value:            18rem !default;
+$double-decimal-value:      20rem !default;
+
+/** Custom spacings **/
+$border-size:               $small-plus-value !default;
+$container-padding:         $medium-plus-value !default;
+
+
+/***************
+ * Breakpoints *
+ ***************/
+
+$tiny-screen:               320px;
+$tiny-plus-screen:          480px;
+$small-screen:              640px;
+$small-plus-screen:         768px;
+$med-screen:                960px;
+$med-plus-screen:           1024px;
+$large-screen:              1280px;
+$large-plus-screen:         1440px;
+$xl-screen:                 1600px;
+$xl-plus-screen:            1920px;
