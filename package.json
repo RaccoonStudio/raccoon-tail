@@ -9,9 +9,7 @@
     "url": "https://github.com/RaccoonStudio/raccoon-tail/issues"
   },
   "homepage": "https://github.com/RaccoonStudio/raccoon-tail",
-  "dependencies": {
-    "normalize.css": "^4.1.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
