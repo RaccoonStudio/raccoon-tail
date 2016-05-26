@@ -1,0 +1,26 @@
+/**
+ * Raccoon's tail kickstarter Sass geometrical forms generation mixins
+ * (rework from zurb foundation framework)
+ *
+ * @author Damien Senger <damien@raccoon.studio>
+ */
+
+
+/**
+ * Create all necessary breakpoints to make default container responsive
+ */
+@mixin container-width() {
+  // container size through breakpoints
+  @each $breakpoint, $width in $container-width {
+    // if it's the first breakpoint, we do it mobile first style
+    @if $breakpoint == 'begin' {
+      width: $width;
+    }
+    // otherwise, we create a breakpoint
+    @else {
+      @include breakpoint($breakpoint) {
+        width: $width;
+      }
+    }
+  }
+}

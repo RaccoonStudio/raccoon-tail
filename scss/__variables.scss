@@ -103,6 +103,18 @@ $container-padding:         $medium-plus-value !default;
 $codeblock-maxheight:       $double-decimal-value !default;
 
 
+/*******************
+ * Container width *
+ *******************/
+
+$container-width: (
+  begin: 100%,
+  small-plus: 750px,
+  med-plus: 970px,
+  large: 1170px,
+);
+
+
 /***************
  * Breakpoints *
  ***************/

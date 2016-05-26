@@ -141,3 +141,9 @@ figure {
   border-collapse: collapse;
   clear: both;
 }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  @include container-width();
+}
